@@ -1,0 +1,181 @@
+:root {
+    --_green: #0a8754ff;
+    --_pink: #e637bfff;
+    --_yellow: #ead94cff;
+    --_blue: #1982c4;
+    --_red: #f95738ff;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: #f7f7f7;
+}
+
+.londrina {
+    font-family: "Londrina Shadow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lexend {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.teachers {
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  align-items: center;
+}
+
+#teacher_inp {
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 2px solid var(--_blue);
+    outline: none;
+    background: #fff;
+    color: #111;
+}
+
+.teacher-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: min(340px, 85vw);
+}
+.material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+#tplayback {
+    font-size: 10dvw;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.control-btn {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 999px;
+    background: var(--_green);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.step-arrow {
+    width: 56px !important;
+    height: 28px !important;
+    border-radius: 999px !important;
+    padding: 0 !important;
+}
+
+.step-arrow .material-symbols-outlined {
+    font-size: 28px;
+}
+
+.control-btn:hover,
+.control-btn:focus-visible {
+    transform: translateY(-2px) scale(1.05);
+    background: #6aba7c;
+}
+
+#share_btn {
+    background: var(--_pink);
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    padding: 0;
+}
+
+#share_btn:hover,
+#share_btn:focus-visible {
+    background: #f06bd3;
+}
+
+.small-share-btn .material-symbols-outlined {
+    font-size: 1.35rem;
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.control-btn .material-symbols-outlined {
+    font-size: 1.8rem;
+}
+
+#copy_alert {
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+    transition: opacity 0.2s ease, transform 0.2s ease, overlay 0.2s ease allow-discrete, display 0.2s ease allow-discrete;
+}
+
+#copy_alert[open] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+@starting-style {
+    #copy_alert[open] {
+        opacity: 0;
+        transform: translateY(10px) scale(0.97);
+    }
+}
+
+#copy_alert::backdrop {
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transition: opacity 0.2s ease, overlay 0.2s ease allow-discrete, display 0.2s ease allow-discrete;
+}
+
+#copy_alert[open]::backdrop {
+    opacity: 1;
+}
+
+@starting-style {
+    #copy_alert[open]::backdrop {
+        opacity: 0;
+    }
+}
+
+#copy_alert button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    background: var(--_blue);
+    color: #fff;
+    cursor: pointer;
+}

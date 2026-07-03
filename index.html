@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looom - Word Playback Experiment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Lexend:wght@100..900&family=Londrina+Shadow&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <dialog id="copy_alert">
+        <p class="teachers">Copied to clipboard!</p>
+        <button onclick="document.getElementById('copy_alert').close()">Close</button>
+    </dialog>
+    <h1 class="teachers">Word Playback Experiment</h1>
+    <p id="tplayback" class="lexend">salam</p>
+    <div class="controls">
+        <button id="play_btn" class="control-btn" aria-label="Play">
+            <span class="material-symbols-outlined">play_arrow</span>
+        </button>
+        <button id="pause_btn" class="control-btn" aria-label="Pause">
+            <span class="material-symbols-outlined">pause</span>
+        </button>
+        <button id="slow_btn" class="control-btn" aria-label="Slow play">
+            <span class="material-symbols-outlined">slow_motion_video</span>
+        </button>
+        <button id="refresh_btn" class="control-btn" aria-label="Refresh">
+            <span class="material-symbols-outlined">refresh</span>
+        </button>
+        <button id="back_btn" class="control-btn step-arrow" aria-label="Back">
+            <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <button id="forward_btn" class="control-btn step-arrow" aria-label="Forward">
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+    </div>
+    <div class="teacher-row">
+        <input id="teacher_inp" type="text" class="teachers" placeholder="Add the practised word"></input>
+        <button id="share_btn" class="control-btn small-share-btn" aria-label="Copy link">
+            <span class="material-symbols-outlined">share</span>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
