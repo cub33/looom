@@ -74,6 +74,8 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .control-btn {
@@ -123,6 +125,23 @@ body {
 
 .small-share-btn .material-symbols-outlined {
     font-size: 1.35rem;
+}
+
+.beta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: var(--_yellow);
+    color: #3d2d00;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: "Lexend", sans-serif;
+}
+
+.beta-pill .material-symbols-outlined {
+    font-size: 1rem;
 }
 
 .control-btn:active {
